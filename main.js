@@ -5,22 +5,23 @@ function createMainWindow() {
 
     const mainWindow = new BrowserWindow({
 
-        width: 500,
-        height: 600,
+        width: 700,
+        height: 800,
         title: 'Image Shrink',
+        backgroundColor: '#2e2c29',
         webPreferences: {
             nodeIntegration: true
-        }
+        },
     })
 
 
     //Load the index.html of the app
 
-    mainWindow.loadFile('index.html')
+    mainWindow.loadFile(`./frontpage/index.html`)
 
 
     // Open the DevTools
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 }
 
 /**
