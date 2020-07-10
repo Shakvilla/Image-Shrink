@@ -1,0 +1,27 @@
+{
+  "name": "image-shrink",
+  "version": "1.0.0",
+  "description": "Image Shrinking Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shakvilla/Image-Shrink.git"
+  },
+  "keywords": [
+    "image",
+    "shrink",
+    "desktop-application"
+  ],
+  "author": "Abdul Shakur Abdullah Clement",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shakvilla/Image-Shrink/issues"
+  },
+  "homepage": "https://github.com/Shakvilla/Image-Shrink#readme",
+  "devDependencies": {
+    "electron": "^9.1.0"
+  }
+}
