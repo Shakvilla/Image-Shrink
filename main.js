@@ -1,34 +1,37 @@
 const { app, BrowserWindow } = require('electron');
 
+process.env.NODE_ENV = 'development'
+
+const isDev = process.env.NODE_ENV !== 'production' ? true : false
+const isMac = process.platform === 'darwin' ? true : false
+
+
+let mainWindow
+
 function createMainWindow() {
 
 
-    const mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow({
 
-        width: 700,
-        height: 800,
+        width: 500,
+        height: 600,
         title: 'Image Shrink',
-        backgroundColor: '#2e2c29',
         webPreferences: {
             nodeIntegration: true
         },
+        icon: './assets/icons/camera-icon.png',
+        resizable: isDev ? true : false
     })
 
 
-    //Load the index.html of the app
 
     mainWindow.loadFile(`./frontpage/index.html`)
 
 
-    // Open the DevTools
-    // mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools()
 }
 
-/**
- * This will be called when Electron has finished
- * initialization and is ready to create browser windows
- * Some APIs can be used after this event occurs
- * */
+
 app.whenReady().then(createMainWindow)
 
 
