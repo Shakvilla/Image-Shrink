@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Shakvilla/Image-Shrink#readme",
   "devDependencies": {
-    "electron": "^9.1.0"
+    "electron": "^9.3.1"
   }
 }
